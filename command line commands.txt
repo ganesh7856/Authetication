@@ -1,0 +1,31 @@
+'''Auth Projects'''
+
+Token Creation by Command line :
+we should intsall '''pip install httpie''' 
+
+
+If token is not generated this command will generate the token ,
+if token is already generated this command will gives you the already generated toekn
+
+
+
+http POST http://127.0.0.1:8000/token/ username="ganesh" password="ganesh1234"--Superuser
+
+http POST http://127.0.0.1:8000/token/ username="sunny" password="ganesh123"--user
+http POST http://127.0.0.1:8000/token/ username="amit" password="ganesh123"--user
+
+
+For CURD of emps when authentication and permission is applied to view :
+
+http http://127.0.0.1:8000/emp/api/v1
+
+result-{
+    "detail": "Authentication credentials were not provided."
+}
+
+
+All GET RECORDS :
+
+http GET http://127.0.0.1:8000/emp/api/v1/ "Authorization:Token f3e2fa2f018ed68306764946b13043c0cdc96f60
+
+s
